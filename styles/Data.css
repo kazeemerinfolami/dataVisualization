@@ -1,0 +1,44 @@
+body{
+  height: 100vh;
+}
+.colorChange{
+  text-align: center;
+  font-size: small;
+}
+/* .evenOddContainer{
+  padding: 20px;
+  font-size: 1.8rem;
+} */
+.spanInput{
+  background-color: rgb(204, 114, 114);
+  font-weight: bold;
+}
+.margin{
+  margin: 5px;
+}
+.calculator{
+  text-align: center;
+}
+button{
+  background-color: rgb(73, 63, 5);
+  border-radius: 10px;
+  color: white;
+  padding: 3px 10px;
+}
+button:hover{
+  background-color: rgb(100, 86, 5);
+  color: white;
+}
+input{
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+form{
+  border-bottom: solid;
+}
+
+.revenueContainer, .calculatorContainer, .resizeContainer, .evenOddContainer{
+  text-align: center;
+  padding: 20px;
+  font-size: 1.8rem;
+}

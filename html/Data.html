@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/Data.css" />
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="icon" href="../img/icons8-combo-chart-50.png" />
+    <title>Aspora Data Page</title>
+  </head>
+  <body>
+    <div class="grid-container" id="grid-container">
+      <header class="row">
+        <div>
+          <a class="brand" href="./index.html"
+            >Aspo<b class="brandspan">ra</b>
+            <img id="icon" src="../img/icons8-combo-chart-50.png" alt=""
+          /></a>
+        </div>
+        <div>
+          <a href="./index.html">Home</a>
+          <a href="./Data.html" style="font-size: 27px; color: black;">Data</a>
+          <a href="# ">Documentions</a>
+          <a href="# ">Gallery</a>
+          <a href="# ">About us</a>
+          <span>
+            <input type="radio" onclick="on()" checked="checked" id="toggleOn" name="toggle" value="toggleOn">
+            <label for="toggleOn">on |</label>
+            <input type="radio" onclick="off()" id="toggleOff" name="toggle" value="toggleOff">
+            <label for="toggleOff">Off</label>
+          </span>
+            
+        </div>
+      </header>
+      <main id="main"> 
+        <div class="colorChange">
+            <input type="radio" onclick="col1()" checked="checked" id="color1" name="color" value="color1">
+            <label for="color1">White</label>
+            <input type="radio" onclick="col2()" id="color2" name="color" value="color2">
+            <label for="color2">Grey</label>
+            <input type="radio" onclick="col3()" id="color3" name="color" value="color3">
+            <label for="color3">Green</label>
+            <input type="radio" onclick="col4()" id="color4" name="color" value="color4">
+            <label for="color4">Blue</label>
+            <input type="radio" onclick="col5()" id="color5" name="color" value="color5">
+            <label for="color5">Black</label>
+            <input type="radio" onclick="col6()" id="color6" name="color" value="color6">
+            <label for="color6">Gold</label>
+        </div>
+        <div class="evenOddContainer">
+          <div class="margin">
+           Insert a number to check if that number is both an even number and is less than 10,000:
+        </div>
+          <form id="submitOddEven">
+            <div class="formSpace">
+              <div><input id="inputOddEven" class="margin" type="text" placeholder="Input number here">
+                <button id="check">check</button>
+              </div>
+              <div class="margin">Result if Even/ ODD: <span id="oddEven" class="spanInput"></span></div>
+              <div class="margin">Result if number and is less than 10,000: <span id="lessNumber" class="spanInput"></span></div>
+            </div>
+          </form>
+        </div>
+        <div class="revenueContainer">
+            <div class="">
+             Insert individual revenue, and its sales targets for the past three months to determine if each month reached its intended sales target
+          </div>
+            <form action="">
+                <div>months: <input type="text" placeholder="month"></div>
+                <div>individual revenue: <input type="text" placeholder="Input individual revenue"></div>
+                <div>sales targets for the past three months: <input type="text" placeholder="sales target"></div>
+                <div>The month of <span>july</span> reached its sales target: <span></span></div>
+                <div>Result if number and is less than 10,000: <span></span></div>
+            </form>
+          </div>
+          <div class="calculatorContainer">
+            <div>Simple calculator</div>
+          <form name="calculator" id="calculator">
+            <input type="text" name="inputNum" id="inputNum">
+            <button>=</button>
+            <span id="solution" class="spanInput"></span>
+          </form>
+        </div>
+          <div class="resizeContainer">
+            <input type="radio" onclick="font1()" checked="checked" id="smallFont" name="font" value="smallFont">
+            <label for="smallFont">small</label>
+            <input type="radio" onclick="font2()" id="mediumFont" name="font" value="mediumFont">
+            <label for="mediumFont">medium</label>
+            <input type="radio" onclick="font3()" id="largeFont" name="font" value="largeFont">
+            <label for="largeFont">large :</label>
+            <span id="resizeWord">This is text</span>
+          </div>
+      </main>
+      <footer id="footer"class="row center">
+        All right reserved: <a href="#"> @Aspora 2020</a>
+      </footer>
+    </div>
+    <script src="/javaScript/data.js"></script>
+  </body>
+</html>
