@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/dataVisual.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="../styles/nav.css" />
+    <link rel="icon" href="../img/icons8-combo-chart-50.png" />
+    <title>Aspora Data Page</title>
+  </head>
+  <body>
+    <div class="grid-container" id="grid-container">
+      <header class="row">
+        <div class="brandName">
+          <a class="brand" href="./index.html"
+            >Aspo<b class="brandspan">ra</b>
+            <img id="icon" src="../img/icons8-combo-chart-50.png" alt=""
+          /></a>
+        </div>
+        <div class="navList">
+          <a href="./index.html">Home</a>
+          <a id="data" href="./Data.html" >Data</a>
+          <a href="# ">Documentions</a>
+          <a href="# ">Gallery</a>
+          <a href="# ">About us</a>
+          <span>
+            <input type="radio" onclick="on()" checked="checked" id="toggleOn" name="toggle" value="toggleOn">
+            <label for="toggleOn">on |</label>
+            <input type="radio" onclick="off()" id="toggleOff" name="toggle" value="toggleOff">
+            <label for="toggleOff">Off</label>
+          </span>
+            
+        </div>
+      </header>
+      <main id="main"> 
+        <div class="slidershow middle">
+          <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <input type="radio" name="r" id="r4">
+            <input type="radio" name="r" id="r5">
+            <input type="radio" name="r" id="r6">
+            <input type="radio" name="r" id="r7">
+            <div class="slide s1">
+              <canvas width="13" height="5" id="doughnutChart"></canvas>
+            </div>
+            <div class="margin" >
+            </div>
+            <div class="slide">
+              <div>
+                <canvas width="13" height="5" id="barChart"></canvas>
+              </div>
+            </div>
+            <div class="slide">
+              <canvas width="13" height="5" id="radarChart"></canvas>
+            </div>
+            <div class="slide">
+              <canvas width="13" height="5" id="pieChart"></canvas>
+            </div>
+            <div class="slide">
+              <canvas width="13" height="5" id="lineChart"></canvas>
+            </div>
+            <div class="slide">
+              <div>hello</div>
+            </div>
+          </div>
+          <div class="navigation">
+            <label for="r1" class="bar"></label>
+             <label for="r2" class="bar"></label>
+              <label for="r3" class="bar"></label>
+               <label for="r4" class="bar"></label>
+                <label for="r5" class="bar"></label>
+                 <label for="r6" class="bar"></label>
+                  <label for="r7" class="bar"></label>
+          </div>
+        </div>
+      </main>
+      <footer id="footer"class="row center">
+        All right reserved: <a href="#"> @Aspora 2020</a>
+      </footer>
+    </div>
+    <script src="/javaScript/chart.js"></script>
+    <script src="/javaScript/data.js"></script>
+  </body>
+</html>

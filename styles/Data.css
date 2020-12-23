@@ -23,7 +23,7 @@ button{
   background-color: rgb(73, 63, 5);
   border-radius: 10px;
   color: white;
-  padding: 3px 10px;
+  padding: 0.5rem 1rem;
 }
 button:hover{
   background-color: rgb(100, 86, 5);
@@ -34,11 +34,38 @@ input{
   border-radius: 10px;
 }
 form{
-  border-bottom: solid;
+  border-bottom: 1px solid gray;
 }
 
 .revenueContainer, .calculatorContainer, .resizeContainer, .evenOddContainer{
   text-align: center;
   padding: 20px;
   font-size: 1.8rem;
+}
+
+/*Media Query*/
+
+@media (max-width: 994px) {
+  .navList a{
+    font-size: 2rem;
+    padding-right: 1px;
+  }
+}
+@media (max-width: 909px) {
+  .navList a{
+    font-size: 1.7rem;
+    padding-right: 0px;
+  }
+}
+@media (max-width: 843px) {
+  .navList a{
+    font-size: 1.5rem;
+    padding-right: 1px;
+  }
+}
+@media (max-width: 787px) {
+  .navList a{
+    font-size: 1.3rem;
+    padding-right: 0px;
+  }
 }

@@ -6,6 +6,7 @@ check = document.getElementById("check"),
 submitOddEven = document.getElementById("submitOddEven")
 oddEven = document.getElementById("oddEven"),
 lessNumber = document.getElementById("lessNumber"),
+ResultInWord=document.getElementById("ResultInWord")
 inputOddEven = document.getElementById("inputOddEven"),
 color1 = document.getElementById("color1"),
 color2 = document.getElementById("color2"),
@@ -20,6 +21,12 @@ resizeWord = document.getElementById("resizeWord"),
 calculator = document.getElementById("calculator"),
 inputNum = document.getElementById("inputNum"),
 solution = document.getElementById("solution"),
+month = document.getElementById("month"),
+revenue = document.getElementById("revenue"),
+target = document.getElementById("target"),
+whatMonth=document.getElementById("whatMonth"),
+ifTarget=document.getElementById("ifTarget"),
+revenueCheck=document.getElementById("revenueCheck"),
 footer = document.getElementById("footer");
 
 //toggle Button
@@ -120,36 +127,87 @@ function font3(){
     }
 }
 
-//calculator
+//check if odd/ even and < then 10000
 
 
 function valueOddEven(e){
   let vod =  inputOddEven.value
-  let num =  lessNumber.value
-    if (vod % 2 === 0) {
+  
+  if (vod === ""){
+    e.preventDefault();
+      oddEven.innerHTML = "Empty input"
+      lessNumber.innerHTML = "Empty input"
+    inputOddEven.value = ""
+    }else if (vod % 2 === 0) {
         e.preventDefault();
         oddEven.innerHTML ="Even number"
+        inputOddEven.value = ""
         }else {
             e.preventDefault();
             oddEven.innerHTML = "Odd number"
-          }
+            inputOddEven.value = ""
+     }
 
-          if(vod < 10000){
-            e.preventDefault();
-            lessNumber.innerHTML = "number is lesser than 10000"
-          }else if(vod == 10000){
-            lessNumber.innerHTML = "number is equal to 10000"
-          }
-          else{
+    if(vod < 10000){
+        e.preventDefault();
+        lessNumber.innerHTML = "number is less than 10000"
+        inputOddEven.value = ""
+        }else if(vod == 10000){
+        lessNumber.innerHTML = "number is equal to 10000"
+        inputOddEven.value = ""
+        }
+        else{
             e.preventDefault();
             lessNumber.innerHTML = "number is greater than 10000"
-          }
+            inputOddEven.value = ""
+        }
+ }
+
+function checkTarget(e){
+    e.preventDefault();
+    let monthInput = month.value
+    let revenueInput = revenue.value
+    let targetInput = target.value
+
+    if(revenueInput == "" ){
+        ifTarget.innerHTML = "invalid input"
+        month.value = ""
+        revenue.value = ""
+        target.value = ""
+    }else if(targetInput == ""){
+        ifTarget.innerHTML = "invalid input"
+        month.value = ""
+        revenue.value = ""
+        target.value = ""
+    }else if(targetInput == ""){
+        ifTarget.innerHTML = "invalid input"
+        month.value = ""
+        revenue.value = ""
+        target.value = ""
+    }else if(revenueInput >= targetInput){
+        e.preventDefault();
+        // whatMonth.innerHTML = monthInput
+        ifTarget.innerHTML = `The month of ${monthInput} reached its sales target`
+        month.value = ""
+        revenue.value = ""
+        target.value = ""
+    }else{
+        e.preventDefault();
+        ifTarget.innerHTML = `The month of ${monthInput} didnt reach its sales target`
+        month.value = ""
+        revenue.value = ""
+        target.value = ""
+    }
 }
+
+
+//calculator
 
 function calculate(e){
     e.preventDefault()
-   solution.innerHTML= eval(inputNum.value)
+   solution.innerHTML = eval(inputNum.value)
 }
 
+revenueCheck.addEventListener("submit", checkTarget)
 calculator.addEventListener("submit", calculate)
 submitOddEven.addEventListener("submit", valueOddEven)

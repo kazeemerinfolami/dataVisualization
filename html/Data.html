@@ -10,17 +10,17 @@
   <body>
     <div class="grid-container" id="grid-container">
       <header class="row">
-        <div>
+        <div class="brandName">
           <a class="brand" href="./index.html"
             >Aspo<b class="brandspan">ra</b>
             <img id="icon" src="../img/icons8-combo-chart-50.png" alt=""
           /></a>
         </div>
-        <div>
+        <div class="navList">
           <a href="./index.html">Home</a>
-          <a href="./Data.html" style="font-size: 27px; color: black;">Data</a>
+          <a id="data" href="./Data.html" >Data</a>
           <a href="# ">Documentions</a>
-          <a href="# ">Gallery</a>
+          <a href="dataVisualization.html">Visualization </a>
           <a href="# ">About us</a>
           <span>
             <input type="radio" onclick="on()" checked="checked" id="toggleOn" name="toggle" value="toggleOn">
@@ -48,34 +48,35 @@
         </div>
         <div class="evenOddContainer">
           <div class="margin">
-           Insert a number to check if that number is both an even number and is less than 10,000:
+            <b>Insert a number to check if that number is an even number and is less than 10,000:</b>
         </div>
           <form id="submitOddEven">
             <div class="formSpace">
               <div><input id="inputOddEven" class="margin" type="text" placeholder="Input number here">
                 <button id="check">check</button>
               </div>
-              <div class="margin">Result if Even/ ODD: <span id="oddEven" class="spanInput"></span></div>
-              <div class="margin">Result if number and is less than 10,000: <span id="lessNumber" class="spanInput"></span></div>
+              <div class="margin"><b>Result if Even/ ODD:</b> <span id="oddEven" class="spanInput"></span></div>
+              <div class="margin"><b>Result if number and is less than 10,000:</b> <span id="lessNumber" class="spanInput"></span></div>
+              <div class="margin"><span class="spanInput" id="ResultInWord"></span></div>
             </div>
           </form>
         </div>
         <div class="revenueContainer">
-            <div class="">
-             Insert individual revenue, and its sales targets for the past three months to determine if each month reached its intended sales target
-          </div>
-            <form action="">
-                <div>months: <input type="text" placeholder="month"></div>
-                <div>individual revenue: <input type="text" placeholder="Input individual revenue"></div>
-                <div>sales targets for the past three months: <input type="text" placeholder="sales target"></div>
-                <div>The month of <span>july</span> reached its sales target: <span></span></div>
-                <div>Result if number and is less than 10,000: <span></span></div>
+            <div >
+             <b>Check revenue if it reach its intended sales target</b>
+          </div >
+            <form action="" id="revenueCheck" >
+                <div class="margin"><b>month:</b> <input type="type" id="month"  placeholder="month"></div>
+                <div class="margin"><b>Revenue:</b> <input type="text" id="revenue" placeholder="Input individual revenue"></div>
+                <div class="margin"><b>Target:</b> <input type="text" id="target" placeholder="sales target"></div>
+                <div class="margin"><span class="spanInput" id="ifTarget"></span></div>
+                <button id="check" class="margin">check</button>
             </form>
           </div>
           <div class="calculatorContainer">
-            <div>Simple calculator</div>
+            <div><b>Simple Calculator</b></div>
           <form name="calculator" id="calculator">
-            <input type="text" name="inputNum" id="inputNum">
+            <input class="margin" type="text" name="inputNum" id="inputNum">
             <button>=</button>
             <span id="solution" class="spanInput"></span>
           </form>
@@ -95,5 +96,6 @@
       </footer>
     </div>
     <script src="/javaScript/data.js"></script>
+    <script src="/javaScript/text.js"></script>
   </body>
 </html>
